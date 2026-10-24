@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lavanda Cake — бенто-торты и торты на заказ в Москве</title>
+    <!-- Подключаем Tailwind CSS для моментального отображения всех стилей из Arena AI -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        choco: '#2e1e23',
+                        plum: {
+                            DEFAULT: '#8a3b5c',
+                            soft: '#f6eef2',
+                            deep: '#6b2d47',
+                        },
+                        cream: '#fdf8f5',
+                        sand: '#f5eae4'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white font-sans text-choco antialiased">
+
+    <!-- ХЕДЕР И ШАПКА САЙТА -->
+    <header class="sticky top-0 z-50 bg-white border-b border-choco/10">
+        <div class="hidden bg-white md:block">
+            <div class="container mx-auto max-w-7xl px-4 flex h-[74px] items-center justify-between gap-6">
+                <a class="flex items-center gap-3" href="/">
+                    <span class="flex items-center justify-center rounded-full bg-gradient-to-br from-plum to-plum-deep font-bold text-white shadow-sm" style="width:44px;height:44px;font-size:22px">L</span>
+                    <span class="leading-tight">
+                        <span class="block font-bold text-xl text-choco">Lavanda Cake</span>
+                        <span class="block text-[10px] font-semibold tracking-[0.28em] text-plum uppercase">студия тортов</span>
+                    </span>
+                </a>
+                <div class="flex items-center gap-8 text-sm">
+                    <span class="flex items-center gap-2 text-choco/70">
+                        <span>
+                            <span class="block font-semibold text-choco">Бесплатная доставка по центру от 5 000 ₽</span>
+                            <span class="block text-xs text-choco/55">Заказы принимаем за 24 часа, бенто-торты — от 12 часов</span>
+                        </span>
+                    </span>
+                </div>
+                <div class="flex items-center gap-5">
+                    <a href="tel:+74951204567" class="group flex items-center gap-2 text-choco">
+                        <span class="leading-tight text-right">
+                            <span class="block text-sm font-bold">+7 (495) 120-45-67</span>
+                            <span class="block text-xs text-choco/55">Ежедневно 09:00 – 21:00</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Навигационное меню -->
+        <nav class="bg-choco text-white shadow-md">
+            <div class="container mx-auto max-w-7xl px-4 flex h-12 items-center justify-center gap-6 text-sm font-semibold tracking-wide uppercase">
+                <a href="#hero" class="hover:text-plum-soft transition">Главная</a>
+                <a href="#benefits" class="hover:text-plum-soft transition">Преимущества</a>
+                <a href="#catalog" class="hover:text-plum-soft transition">Каталог из БД</a>
+                <a href="#bento-promo" class="hover:text-plum-soft transition">Конструктор</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO СЕКЦИЯ -->
+        <section id="hero" class="relative overflow-hidden bg-gradient-to-b from-plum-soft via-white to-white py-10 md:py-16">
+            <div class="container mx-auto max-w-7xl px-4 relative grid items-center gap-10 lg:grid-cols-[1.05fr_1fr]">
+                <div>
+                    <span class="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-[11px] font-bold tracking-[0.18em] text-plum uppercase shadow-sm">
+                        ✨ Бенто-торты от 1 990 ₽
+                    </span>
+                    <h1 class="mt-5 text-4xl font-bold leading-tight text-choco md:text-6xl">
+                        Торт, который<br>говорят <span class="text-plum">за вас</span>
+                    </h1>
+                    <p class="mt-5 max-w-lg text-base leading-relaxed text-choco/70 md:text-lg">
+                        Маленькие бенто-торты с надписью, большие торты на заказ и наборы десертов. Соберём под ваш повод, палитру и текст — и привезём к нужному часу.
+                    </p>
+                    <div class="mt-7 flex flex-wrap gap-3">
+                        <a href="#catalog" class="inline-flex items-center gap-2 rounded-full bg-choco px-7 py-4 text-sm font-bold tracking-wide text-white uppercase transition hover:bg-plum">
+                            Смотреть каталог →
+                        </a>
+                        <a href="#bento-promo" class="inline-flex items-center gap-2 rounded-full border-2 border-plum px-7 py-4 text-sm font-bold tracking-wide text-plum uppercase transition hover:bg-plum hover:text-white">
+                            Собрать бенто-торт
+                        </a>
+                    </div>
+                    <div class="mt-9 grid max-w-lg grid-cols-3 gap-4 border-t border-choco/10 pt-6">
+                        <div>
+                            <p class="text-2xl font-bold text-plum">8 лет</p>
+                            <p class="text-xs text-choco/55">печём с 2018 года</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-plum">4 200+</p>
+                            <p class="text-xs text-choco/55">сделанных тортов</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-plum">4.9</p>
+                            <p class="text-xs text-choco/55">средний рейтинг</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Картинка HERO -->
+                <div class="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-[2.5rem] bg-sand shadow-2xl">
+                    <img src="https://images.pexels.com/photos/20546572/pexels-photo-20546572.jpeg?auto=compress&cs=tinysrgb&w=1100" alt="Бенто-торт" class="h-full w-full object-cover">
+                </div>
+            </div>
+        </section>
+
+        <!-- ПРЕИМУЩЕСТВА (BENEFITS) -->
+        <section id="benefits" class="container mx-auto max-w-7xl px-4 py-14 md:py-20">
+            <div class="text-center mb-10">
+                <p class="text-xs font-semibold tracking-[0.22em] text-plum uppercase">Почему нас выбирают</p>
+                <h2 class="text-3xl font-bold text-choco md:text-4xl mt-2">Пекарня, которой доверяют праздник</h2>
+            </div>
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="rounded-3xl border border-choco/10 bg-white p-6 shadow-sm">
+                    <div class="mb-4 text-2xl">✨</div>
+                    <h3 class="text-xl font-bold text-choco">Всё вручную</h3>
+                    <p class="mt-2 text-sm text-choco/60">Каждый торт собираем под заказ: никаких заготовок и заморозки.</p>
+                </div>
+                <div class="rounded-3xl border border-choco/10 bg-white p-6 shadow-sm">
+                    <div class="mb-4 text-2xl">🌿</div>
+                    <h3 class="text-xl font-bold text-choco">Чистый состав</h3>
+                    <p class="mt-2 text-sm text-choco/60">Сливки 33%, бельгийский шоколад, сезонные ягоды, без маргарина.</p>
+                </div>
+                <div class="rounded-3xl border border-choco/10 bg-white p-6 shadow-sm">
+                    <div class="mb-4 text-2xl">🚚</div>
+                    <h3 class="text-xl font-bold text-choco">Доставка в интервал</h3>
+                    <p class="mt-2 text-sm text-choco/60">Привозим к точному часу, бесплатно по центру от 5 000 ₽.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ДИНАМИЧЕСКИЙ КАТАЛОГ ИЗ POSTGRESQL -->
+        <section id="catalog" class="bg-cream py-14 md:py-20">
+            <div class="container mx-auto max-w-7xl px-4">
+                <div class="mb-8 text-center">
+                    <p class="text-xs font-semibold tracking-[0.22em] text-plum uppercase">Каталог из PostgreSQL</p>
+                    <h2 class="text-3xl font-bold text-choco md:text-4xl mt-2">Наши бенто-торты</h2>
+                    <p class="mt-2 text-sm text-choco/60">Эти данные подгружаются напрямую через бэкенд Node.js из базы данных</p>
+                </div>
+
+                <!-- Контейнер для карточек, которые мы наполним из бэкенда -->
+                <div id="products-grid" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    <p class="col-span-full text-center text-choco/50">Загрузка товаров из базы данных...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- СЕКЦИЯ КОНСТРУКТОРА -->
+        <section id="bento-promo" class="container mx-auto max-w-7xl px-4 py-14">
+            <div class="grid overflow-hidden rounded-[2.5rem] bg-choco text-white lg:grid-cols-2">
+                <div class="relative min-h-[280px]">
+                    <img src="https://images.pexels.com/photos/7190367/pexels-photo-7190367.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Конструктор" class="h-full w-full object-cover">
+                </div>
+                <div class="p-8 md:p-12">
+                    <h2 class="text-3xl font-bold md:text-4xl">Бенто-торт по вашему сценарию</h2>
+                    <p class="mt-3 text-sm text-white/65">
+                        Выберите вес, начинку, цвет крема и напишите надпись — хоть «прости за вчерашнее».
+                    </p>
+                    <button onclick="alert('Заказ принят! В бэкенде можно обработать отправку в БД.')" class="mt-8 inline-flex items-center gap-2 rounded-full bg-plum px-7 py-4 text-sm font-bold tracking-wide uppercase transition hover:bg-plum-deep">
+                        Заказать свой дизайн
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-choco text-white py-8 text-center text-xs text-white/50 border-t border-white/10">
+        <p>© 2026 Lavanda Cake. Учебный проект для колледжа (Node.js + Express + PostgreSQL).</p>
+    </footer>
+
+    <!-- СКРИПТ ПОДКЛЮЧЕНИЯ К НАШЕМУ БЭКЕНДУ NODE.JS -->
+    <script>
+        async function loadProductsFromBackend() {
+            try {
+                // Делаем запрос к нашему API
+                const response = await fetch('/api/products');
+                const products = await response.json();
+
+                const grid = document.getElementById('products-grid');
+                grid.innerHTML = ''; // Очищаем текст загрузки
+
+                if (products.length === 0) {
+                    grid.innerHTML = '<p class="col-span-full text-center text-choco/50">В базе данных пока нет товаров.</p>';
+                    return;
+                }
+
+                // Отрисовываем каждый торт из PostgreSQL в красивой карточке
+                products.forEach(item => {
+                    const card = document.createElement('div');
+                    card.className = 'group rounded-3xl border border-choco/10 bg-white p-6 transition hover:-translate-y-1 hover:shadow-xl flex flex-col justify-between';
+                    
+                    const imageUrl = item.image_url || 'https://images.pexels.com/photos/20546572/pexels-photo-20546572.jpeg?auto=compress&cs=tinysrgb&w=600';
+
+                    card.innerHTML = `
+                        <div>
+                            <div class="relative aspect-square w-full overflow-hidden rounded-2xl bg-sand mb-4">
+                                <img src="${imageUrl}" alt="${item.title}" class="h-full w-full object-cover">
+                            </div>
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-plum bg-plum-soft px-2.5 py-1 rounded-full">${item.category || 'Бенто-торт'}</span>
+                            <h3 class="mt-2 text-xl font-bold text-choco">${item.title}</h3>
+                            <p class="mt-1 text-sm text-choco/60 line-clamp-2">${item.description || 'Нежный бенто-торт ручной работы.'}</p>
+                        </div>
+                        <div class="mt-6 flex items-center justify-between border-t border-choco/10 pt-4">
+                            <span class="text-xl font-bold text-plum">${item.price} ₽</span>
+                            <button onclick="alert('Товар \\"${item.title}\\" добавлен!')" class="rounded-full bg-choco px-4 py-2 text-xs font-bold text-white uppercase transition hover:bg-plum">Заказать</button>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
+            } catch (err) {
+                console.error('Ошибка при загрузке с сервера:', err);
+                document.getElementById('products-grid').innerHTML = '<p class="col-span-full text-center text-red-500">Ошибка подключения к Node.js бэкенду.</p>';
+            }
+            }
+
+        // Запускаем загрузку сразу при открытии страницы
+        loadProductsFromBackend();
+    </script>
+</body>
+</html>
