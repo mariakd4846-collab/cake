@@ -47,6 +47,25 @@ app.get('/api/products/:id', async (req, res) => {
     res.status(500).json({ error: 'Ошибка сервера' });
   }
 });
+// Эндпоинт для создания заказа
+app.post('/api/orders', async (req, res) => {
+  const { customer_name, phone, product_title, comment } = req.body;
+  try {
+    // Если у тебя еще нет таблицы orders, можно пока сохранять в логи или создать таблицу
+    const query = `
+      INSERT INTO orders (customer_name, phone, product_title, comment) 
+      VALUES ($1, $2, $3, $4) RETURNING *;
+    `;
+    // Пример (если таблица orders создана):
+    // const result = await db.query(query, [customer_name, phone, product_title, comment]);
+    
+    // Пока для теста отвечаем успехом:
+    res.json({ success: true, message: 'Заказ успешно оформлен!' });
+  } catch (err) {
+    console.error('Ошибка при сохранении заказа:', err);
+    res.status(500).json({ error: 'Ошибка сервера при заказе' });
+  }
+});
 
 // Запуск сервера
 app.listen(PORT, () => {
